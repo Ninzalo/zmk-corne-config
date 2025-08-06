@@ -78,7 +78,7 @@ layers:
   - {t: '9', h: '$$mdi:apple-keyboard-control$$', s: (}
   - {t: '0', h: '$$mdi:apple-keyboard-command$$', s: )}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - GLOBE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
