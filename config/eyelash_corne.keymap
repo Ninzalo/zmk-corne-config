@@ -44,7 +44,7 @@
 &kp TAB     &kp Q        &kp W                &kp E            &kp R              &kp T                      &none         &kp Y      &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
 &kp GRAVE   &hml LGUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &kp G               &none  &none  &none  &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
 &kp ESCAPE  &kp Z        &kp X                &kp C            &kp V              &kp B      &none           &none         &kp N      &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
-                                              &kp BSPC         &none              &kp ENTER                                &kp SPACE  &mo 1               &none
+                                              &kp BSPC         &mo 2              &kp SPACE                                &kp ENTER  &mo 1               &none
             >;
         };
 
@@ -54,8 +54,19 @@
 &none  &kp F1                &kp F2                &kp F3            &kp F4              &kp F5                     &none         &kp F6     &kp F7               &kp F8             &kp F9                 &kp F11                &kp F12
 &none  &hml LEFT_COMMAND N1  &hml LEFT_CONTROL N2  &hml LEFT_ALT N3  &hml LEFT_SHIFT N4  &kp N5              &none  &none  &none  &kp N6     &hmr RIGHT_SHIFT N7  &hmr RIGHT_ALT N8  &hmr RIGHT_CONTROL N9  &hmr RIGHT_COMMAND N0  &none
 &none  &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none      &kp EQUAL            &none              &none                  &none                  &none
-                                                   &kp BSPC          &none               &kp ENTER                                &kp SPACE  &trans               &none
+                                                   &kp BSPC          &none               &kp SPACE                                &kp ENTER  &trans               &none
             >;
+        };
+
+        arrow_layer {
+            bindings = <
+&none  &none             &none             &none         &none           &none                  &none         &none      &none     &none     &none         &none      &none
+&none  &kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &none           &none  &none  &none  &none      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
+&none  &none             &none             &none         &none           &none  &none           &none         &none      &none     &none     &none         &none      &none
+                                           &none         &trans          &none                                &kp ENTER  &trans    &none
+            >;
+
+            label = "ARROW";
         };
 
         lower_layer {
