@@ -54,6 +54,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        system_combo {
+            bindings = <&mo 3>;
+            key-positions = <43 46>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -88,13 +97,13 @@
             label = "ARROW";
         };
 
-        lower_layer {
-            display-name = "NUMBER OLD";
+        sys_layer {
+            display-name = "SYSTEM";
             bindings = <
-&none  &kp N1  &kp N2        &kp N3        &kp N4        &kp N5                  &none         &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
-&none  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none            &none  &none  &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&none  &none   &none         &none         &none         &none   &none           &none         &none     &none     &none   &none      &kp END   &kp PG_DN
-                             &none         &none         &none                                 &none     &none     &none
+&sys_reset  &none  &none         &none         &none         &none                  &none         &none  &none  &none  &none  &none  &none
+&none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none       &none  &none         &out OUT_USB  &out OUT_BLE  &none  &none           &none         &none  &none  &none  &none  &none  &none
+                                 &none         &none         &none                                &none  &none  &none
             >;
         };
 
