@@ -39,14 +39,15 @@
         prtscr: prtscr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp N4>;
+            bindings = <&kp LS(LG(N4))>, <&macro_press>;
+
             label = "PRTSCR";
         };
 
         prtscr_fast: prtscr_fast {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp N3>;
+            bindings = <&kp LS(LG(N3))>;
             label = "PRTSCR_FAST";
         };
     };
