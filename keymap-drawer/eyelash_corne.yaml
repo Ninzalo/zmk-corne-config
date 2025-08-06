@@ -63,7 +63,7 @@ layers:
   - F9
   - F11
   - F12
-  - NUMBER (FN)
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
@@ -248,3 +248,5 @@ layers:
 combos:
 - p: [43, 46]
   k: SYSTEM
+- p: [46, 13]
+  k: NUMBER (FN)
