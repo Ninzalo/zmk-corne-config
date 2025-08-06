@@ -63,7 +63,7 @@ layers:
   - F9
   - F11
   - F12
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - NUMBER (FN)
   - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
@@ -112,7 +112,7 @@ layers:
   - $$mdi:skip-next$$
   - F11
   - F12
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {type: held}
   - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
@@ -248,5 +248,3 @@ layers:
 combos:
 - p: [43, 46]
   k: SYSTEM
-- p: [46, 13]
-  k: NUMBER (FN)
