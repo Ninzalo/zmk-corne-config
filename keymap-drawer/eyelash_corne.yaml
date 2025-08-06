@@ -106,12 +106,12 @@ layers:
   - '&prtscr_fast'
   - '&prtscr'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F6
   - PREVIOUS
   - PLAY PAUSE
   - $$mdi:skip-next$$
-  - F11
-  - F12
+  - $$mdi:volume-off$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - {type: held}
   - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
