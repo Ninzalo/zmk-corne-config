@@ -44,17 +44,26 @@
 &kp TAB     &kp Q        &kp W                &kp E            &kp R              &kp T                      &none         &kp Y      &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
 &kp GRAVE   &hml LGUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &kp G               &none  &none  &none  &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
 &kp ESCAPE  &kp Z        &kp X                &kp C            &kp V              &kp B      &none           &none         &kp N      &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
-                                              &none            &kp BACKSPACE      &kp ENTER                                &kp SPACE  &mo 3               &none
+                                              &kp BSPC         &none              &kp ENTER                                &kp SPACE  &mo 1               &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&none  &kp F1                &kp F2                &kp F3            &kp F4              &kp F5                     &none         &kp F6     &kp F7               &kp F8             &kp F9                 &kp F11                &kp F12
+&none  &hml LEFT_COMMAND N1  &hml LEFT_CONTROL N2  &hml LEFT_ALT N3  &hml LEFT_SHIFT N4  &kp N5              &none  &none  &none  &kp N6     &hmr RIGHT_SHIFT N7  &hmr RIGHT_ALT N8  &hmr RIGHT_CONTROL N9  &hmr RIGHT_COMMAND N0  &none
+&none  &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none      &kp EQUAL            &none              &none                  &none                  &none
+                                                   &kp BSPC          &none               &kp ENTER                                &kp SPACE  &trans               &none
             >;
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "NUMBER OLD";
             bindings = <
-&none  &kp N1  &kp N2        &kp N3        &kp N4        &kp N5                        &none         &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
-&none  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3           &none  &none  &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&none  &none   &none         &none         &none         &none         &none           &none         &none     &none     &none   &none      &kp END   &kp PG_DN
-                             &none         &none         &none                                       &kp INS   &kp DEL   &none
+&none  &kp N1  &kp N2        &kp N3        &kp N4        &kp N5                  &none         &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
+&none  &none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none            &none  &none  &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&none  &none   &none         &none         &none         &none   &none           &none         &none     &none     &none   &none      &kp END   &kp PG_DN
+                             &none         &none         &none                                 &none     &none     &none
             >;
         };
 
@@ -65,15 +74,6 @@
 &none  &none         &none         &none     &none     &none               &none  &none  &none  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &none  &out OUT_USB  &out OUT_BLE  &none     &none     &none      &none           &none         &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                    &none     &none     &kp SPACE                                &kp RET    &none      &none
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4     &kp F5                     &none         &kp F6     &kp F7     &kp F8  &kp F9  &kp F11  &kp F12
-&none  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5              &none  &none  &none  &kp N6     &kp N7     &kp N8  &kp N9  &kp N0   &none
-&none  &none   &none   &none   &kp MINUS  &none      &none           &none         &none      &kp EQUAL  &none   &none   &none    &none
-                       &none   &kp BSPC   &kp ENTER                                &kp SPACE  &none      &none
             >;
         };
     };
