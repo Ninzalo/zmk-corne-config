@@ -34,10 +34,10 @@
             hold-trigger-key-positions = <33 18 5 0 1 2 3 4 13 14 15 16 17 28 29 30 31 32>;
         };
 
-        hyperkey: hyperkey {
+        hyper_beh: hyper_beh {
             compatible = "zmk,behavior-hold-tap";
-            label = "HYPERKEY";
-            bindings = <&hyper>, <&kp>;
+            label = "HYPER_BEH";
+            bindings = <&hyper_macro>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <1 2 3 4 5 7 8 9 10 11 12 14 15 16 17 18 22 23 24 25 26 27 29 30 31 32 33 36 37 38 39 40 41 42 43 44 45 46 47>;
@@ -46,11 +46,11 @@
     };
 
     macros {
-        hyper: hyper {
+        hyper_macro: hyper_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_COMMAND &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_SHIFT>;
-            label = "HYPER";
+            label = "HYPER_MACRO";
         };
     };
 
@@ -60,10 +60,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB            &kp Q        &kp W                &kp E            &kp R              &kp T                      &none         &kp Y         &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
-&hyperkey 0 GRAVE  &hml LGUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
-&kp ESCAPE         &kp Z        &kp X                &kp C            &kp V              &kp B      &none           &none         &kp N         &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
-                                                     &kp BSPC         &mo 2              &kp SPACE                                &kp ENTER     &mo 1               &none
+&kp TAB             &kp Q        &kp W                &kp E            &kp R              &kp T                      &none         &kp Y         &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
+&hyper_beh 0 GRAVE  &hml LGUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
+&kp ESCAPE          &kp Z        &kp X                &kp C            &kp V              &kp B      &none           &none         &kp N         &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
+                                                      &kp BSPC         &mo 2              &kp SPACE                                &kp ENTER     &mo 1               &none
             >;
         };
 
