@@ -47,9 +47,58 @@ layers:
   - ARROW
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - NUMBER
+  - NUMBER (FN)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   NUMBER:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F11
+  - F12
+  - NUMBER (FN)
+  - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
+  - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
+  - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$', s: $}
+  - {t: '5', s: '%'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '6', s: ^}
+  - {t: '7', h: '$$mdi:apple-keyboard-shift$$', s: '&'}
+  - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
+  - {t: '9', h: '$$mdi:apple-keyboard-control$$', s: (}
+  - {t: '0', h: '$$mdi:apple-keyboard-command$$', s: )}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '=', s: +}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  NUMBER (FN):
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
