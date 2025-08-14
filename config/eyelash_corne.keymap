@@ -72,6 +72,26 @@
             bindings = <&mo 5>;
             key-positions = <43 46>;
         };
+
+        zoom_in {
+            bindings = <&kp LG(LS(EQUAL))>;
+            key-positions = <46 14 17 37>;
+        };
+
+        zoom_out {
+            bindings = <&kp LG(LS(MINUS))>;
+            key-positions = <46 23 26 32>;
+        };
+
+        next_space {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <43 15 25>;
+        };
+
+        prev_space {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <43 15 22>;
+        };
     };
 
     keymap {
@@ -102,7 +122,7 @@
             bindings = <
 &none  &kp F1                &kp F2                &kp F3            &kp F4              &kp F5                     &none         &kp F6     &kp F7               &kp F8             &kp F9                 &kp F11                &kp F12
 &mo 3  &hml LEFT_COMMAND N1  &hml LEFT_CONTROL N2  &hml LEFT_ALT N3  &hml LEFT_SHIFT N4  &kp N5              &none  &none  &none  &kp N6     &hmr RIGHT_SHIFT N7  &hmr RIGHT_ALT N8  &hmr RIGHT_CONTROL N9  &hmr RIGHT_COMMAND N0  &none
-&none  &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none      &kp EQUAL            &none              &none                  &none                  &none
+&none  &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none      &kp EQUAL            &none              &kp DOT                &none                  &none
                                                    &kp BSPC          &trans              &kp SPACE                                &kp ENTER  &trans               &none
             >;
         };
