@@ -52,8 +52,7 @@
         prtscr: prtscr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(N4))>, <&macro_press>;
-
+            bindings = <&kp LS(LG(N4))>;
             label = "PRTSCR";
         };
 
