@@ -55,6 +55,16 @@
 
             tapping-term-ms = <200>;
         };
+
+        hml_mo: hml_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_MO";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -108,10 +118,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q        &kp W                &kp E            &kp R              &kp T                      &none         &kp Y         &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
-&caps_beh   &hml LGUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
-&kp ESCAPE  &kp Z        &kp X                &kp C            &kp V              &kp B      &none           &none         &kp N         &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
-                                              &kp BSPC         &mo 4              &kp SPACE                                &kp ENTER     &mo 2               &none
+&kp TAB     &kp Q        &kp W        &kp E        &kp R        &kp T                      &none         &kp Y         &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
+&caps_beh   &hml_mo 6 A  &hml_mo 7 S  &hml_mo 8 D  &hml_mo 9 F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
+&kp ESCAPE  &kp Z        &kp X        &kp C        &kp V        &kp B      &none           &none         &kp N         &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
+                                      &kp BSPC     &mo 4        &kp SPACE                                &kp ENTER     &mo 2               &none
             >;
         };
 
@@ -163,6 +173,42 @@
 &none       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none       &none  &none         &out OUT_USB  &out OUT_BLE  &none  &none           &none         &none  &none  &none  &none  &none  &none
                                  &none         &none         &none                                &none  &none  &none
+            >;
+        };
+
+        l_gui {
+            bindings = <
+&none  &none   &none      &none         &none      &none                          &none         &kp LG(Y)      &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(P)     &kp LG(LBKT)
+&none  &trans  &kp LCTRL  &kp LALT      &kp LSHFT  &none                   &none  &none  &none  &kp LG(H)      &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMI)  &kp LG(APOS)
+&none  &none   &none      &none         &none      &none          &none           &none         &kp LG(N)      &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(RBKT)  &kp LG(FSLH)
+                          &kp LG(BSPC)  &none      &kp LG(SPACE)                                &kp LG(ENTER)  &none      &none
+            >;
+        };
+
+        l_ctrl {
+            bindings = <
+&none  &none     &none   &none         &none      &none                          &none         &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)
+&none  &kp LGUI  &trans  &kp LALT      &kp LSHFT  &none                   &none  &none  &none  &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(APOS)
+&none  &none     &none   &none         &none      &none          &none           &none         &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(RBKT)  &kp LC(FSLH)
+                         &kp LC(BSPC)  &none      &kp LC(SPACE)                                &kp LC(ENTER)  &none      &none
+            >;
+        };
+
+        l_alt {
+            bindings = <
+&none  &none     &none      &none         &none      &none                          &none         &kp LA(Y)      &kp LA(U)  &kp LA(I)      &kp LA(O)    &kp LA(P)     &kp LA(LBKT)
+&none  &kp LGUI  &kp LCTRL  &trans        &kp LSHFT  &none                   &none  &none  &none  &kp LA(H)      &kp LA(J)  &kp LA(K)      &kp LA(L)    &kp LA(SEMI)  &kp LA(APOS)
+&none  &none     &none      &none         &none      &none          &none           &none         &kp LA(N)      &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp LA(RBKT)  &kp LA(FSLH)
+                            &kp LA(BSPC)  &none      &kp LA(SPACE)                                &kp LA(ENTER)  &none      &none
+            >;
+        };
+
+        l_shift {
+            bindings = <
+&none  &none     &none      &none         &none   &none                          &none         &kp LS(Y)      &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)     &kp LS(LBKT)
+&none  &kp LGUI  &kp LCTRL  &kp LALT      &trans  &none                   &none  &none  &none  &kp LS(H)      &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMI)  &kp LS(APOS)
+&none  &none     &none      &none         &none   &none          &none           &none         &kp LS(N)      &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(RBKT)  &kp LS(FSLH)
+                            &kp LS(BSPC)  &none   &kp LS(SPACE)                                &kp LS(ENTER)  &none      &none
             >;
         };
     };
