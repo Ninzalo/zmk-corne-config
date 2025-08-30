@@ -51,7 +51,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "VIM_J";
             #binding-cells = <0>;
-            bindings = <&hmr RIGHT_SHIFT J>, <&kp DOWN_ARROW>;
+            bindings = <&hmr RIGHT_SHIFT J>, <&kp J>;
 
             tapping-term-ms = <185>;
         };
@@ -61,7 +61,7 @@
             label = "VIM_K";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&hmr RIGHT_ALT K>, <&kp UP_ARROW>;
+            bindings = <&hmr RIGHT_ALT K>, <&kp K>;
         };
 
         caps_beh: caps_beh {
