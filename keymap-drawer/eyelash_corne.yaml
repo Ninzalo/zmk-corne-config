@@ -566,7 +566,7 @@ layers:
   - Ctl+$$mdi:apple-keyboard-shift$$
   - Ctl+$$mdi:apple-keyboard-option$$
   - {type: held}
-  - Ctl+LGUI
+  - Ctl+RGUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:keyboard-esc$$
   - Ctl+Z
@@ -615,7 +615,7 @@ layers:
   - AltGr+$$mdi:apple-keyboard-shift$$
   - {type: held}
   - AltGr+$$mdi:apple-keyboard-control$$
-  - AltGr+LGUI
+  - AltGr+RGUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - AltGr+$$mdi:keyboard-esc$$
   - AltGr+Z
@@ -664,7 +664,7 @@ layers:
   - {type: held}
   - Sft+$$mdi:apple-keyboard-option$$
   - Sft+$$mdi:apple-keyboard-control$$
-  - Sft+LGUI
+  - Sft+RGUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+$$mdi:keyboard-esc$$
   - Sft+Z
