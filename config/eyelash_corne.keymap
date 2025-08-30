@@ -225,7 +225,7 @@
         r_gui {
             bindings = <
 &kp RG(TAB)             &kp RG(Q)  &kp RG(W)  &kp RG(E)     &kp RG(R)  &kp RG(T)                      &none         &none          &none          &none         &none          &none   &none
-&hyper_beh 1 RG(GRAVE)  &kp RG(A)  &kp RG(S)  &kp RG(D)     &kp RG(F)  &kp RG(G)               &none  &none  &none  &none          &kp RG(LSHFT)  &kp RG(LALT)  &kp RG(LCTRL)  &trans  &none
+&hyper_beh 1 RG(GRAVE)  &kp RG(A)  &kp RG(S)  &kp RG(D)     &kp RG(F)  &kp RG(G)               &none  &none  &none  &none          &kp RG(RSHFT)  &kp RG(RALT)  &kp RG(RCTRL)  &trans  &none
 &kp RG(ESC)             &kp RG(Z)  &kp RG(X)  &kp RG(C)     &kp RG(V)  &kp RG(B)      &none           &none         &none          &none          &none         &none          &none   &none
                                               &kp RG(BSPC)  &none      &kp RG(SPACE)                                &kp RG(ENTER)  &none          &none
             >;
@@ -234,7 +234,7 @@
         r_ctrl {
             bindings = <
 &kp RC(TAB)             &kp RC(Q)  &kp RC(W)  &kp RC(E)     &kp RC(R)  &kp RC(T)                      &none         &none          &none          &none         &none   &none         &none
-&hyper_beh 1 RC(GRAVE)  &kp RC(A)  &kp RC(S)  &kp RC(D)     &kp RC(F)  &kp RC(G)               &none  &none  &none  &none          &kp RC(LSHFT)  &kp RC(LALT)  &trans  &kp RC(LGUI)  &none
+&hyper_beh 1 RC(GRAVE)  &kp RC(A)  &kp RC(S)  &kp RC(D)     &kp RC(F)  &kp RC(G)               &none  &none  &none  &none          &kp RC(RSHFT)  &kp RC(RALT)  &trans  &kp RC(RGUI)  &none
 &kp RC(ESC)             &kp RC(Z)  &kp RC(X)  &kp RC(C)     &kp RC(V)  &kp RC(B)      &none           &none         &none          &none          &none         &none   &none         &none
                                               &kp RC(BSPC)  &none      &kp RC(SPACE)                                &kp RC(ENTER)  &none          &none
             >;
@@ -243,7 +243,7 @@
         r_alt {
             bindings = <
 &kp RA(TAB)             &kp RA(Q)  &kp RA(W)  &kp RA(E)     &kp RA(R)  &kp RA(T)                      &none         &none          &none          &none   &none          &none         &none
-&hyper_beh 1 RA(GRAVE)  &kp RA(A)  &kp RA(S)  &kp RA(D)     &kp RA(F)  &kp RA(G)               &none  &none  &none  &none          &kp RA(LSHFT)  &trans  &kp RA(LCTRL)  &kp RA(LGUI)  &none
+&hyper_beh 1 RA(GRAVE)  &kp RA(A)  &kp RA(S)  &kp RA(D)     &kp RA(F)  &kp RA(G)               &none  &none  &none  &none          &kp RA(RSHFT)  &trans  &kp RA(RCTRL)  &kp RA(RGUI)  &none
 &kp RA(ESC)             &kp RA(Z)  &kp RA(X)  &kp RA(C)     &kp RA(V)  &kp RA(B)      &none           &none         &none          &none          &none   &none          &none         &none
                                               &kp RA(BSPC)  &none      &kp RA(SPACE)                                &kp RA(ENTER)  &none          &none
             >;
@@ -252,7 +252,7 @@
         r_shift {
             bindings = <
 &kp RS(TAB)             &kp RS(Q)  &kp RS(W)  &kp RS(E)     &kp RS(R)  &kp RS(T)                      &none         &none          &none   &none         &none          &none         &none
-&hyper_beh 1 RS(GRAVE)  &kp RS(A)  &kp RS(S)  &kp RS(D)     &kp RS(F)  &kp RS(G)               &none  &none  &none  &none          &trans  &kp RS(LALT)  &kp RS(LCTRL)  &kp RS(LGUI)  &none
+&hyper_beh 1 RS(GRAVE)  &kp RS(A)  &kp RS(S)  &kp RS(D)     &kp RS(F)  &kp RS(G)               &none  &none  &none  &none          &trans  &kp RS(RALT)  &kp RS(RCTRL)  &kp RS(RGUI)  &none
 &kp RS(ESC)             &kp RS(Z)  &kp RS(X)  &kp RS(C)     &kp RS(V)  &kp RS(B)      &none           &none         &none          &none   &none         &none          &none         &none
                                               &kp RS(BSPC)  &none      &kp RS(SPACE)                                &kp RS(ENTER)  &none   &none
             >;
