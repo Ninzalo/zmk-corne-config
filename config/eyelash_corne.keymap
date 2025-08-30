@@ -65,6 +65,16 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
         };
+
+        hmr_mo: hmr_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_MO";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -118,10 +128,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q        &kp W        &kp E        &kp R        &kp T                      &none         &kp Y         &kp U               &kp I             &kp O                 &kp P                    &kp LEFT_BRACKET
-&caps_beh   &hml_mo 6 A  &hml_mo 7 S  &hml_mo 8 D  &hml_mo 9 F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RIGHT_SHIFT J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_COMMAND SEMI  &kp SQT
-&kp ESCAPE  &kp Z        &kp X        &kp C        &kp V        &kp B      &none           &none         &kp N         &kp M               &kp COMMA         &kp DOT               &kp RIGHT_BRACKET        &kp SLASH
-                                      &kp BSPC     &mo 4        &kp SPACE                                &kp ENTER     &mo 2               &none
+&kp TAB     &kp Q        &kp W        &kp E        &kp R        &kp T                      &none         &kp Y         &kp U         &kp I         &kp O         &kp P              &kp LEFT_BRACKET
+&caps_beh   &hml_mo 6 A  &hml_mo 7 S  &hml_mo 8 D  &hml_mo 9 F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr_mo 13 J  &hmr_mo 12 K  &hmr_mo 11 L  &hmr_mo 10 SEMI    &kp SQT
+&kp ESCAPE  &kp Z        &kp X        &kp C        &kp V        &kp B      &none           &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp RIGHT_BRACKET  &kp SLASH
+                                      &kp BSPC     &mo 4        &kp SPACE                                &kp ENTER     &mo 2         &none
             >;
         };
 
@@ -178,37 +188,73 @@
 
         l_gui {
             bindings = <
-&none  &none   &none      &none         &none      &none                          &none         &kp LG(Y)      &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(P)     &kp LG(LBKT)
-&none  &trans  &kp LCTRL  &kp LALT      &kp LSHFT  &none                   &none  &none  &none  &kp LG(H)      &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMI)  &kp LG(APOS)
-&none  &none   &none      &none         &none      &none          &none           &none         &kp LG(N)      &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(RBKT)  &kp LG(FSLH)
-                          &kp LG(BSPC)  &none      &kp LG(SPACE)                                &kp LG(ENTER)  &none      &none
+&none  &none   &none          &none         &none          &none                          &none         &kp LG(Y)      &kp LG(U)  &kp LG(I)      &kp LG(O)    &kp LG(P)     &kp LG(LBKT)
+&none  &trans  &kp LG(LCTRL)  &kp LG(LALT)  &kp LG(LSHFT)  &none                   &none  &none  &none  &kp LG(H)      &kp LG(J)  &kp LG(K)      &kp LG(L)    &kp LG(SEMI)  &kp LG(APOS)
+&none  &none   &none          &none         &none          &none          &none           &none         &kp LG(N)      &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)  &kp LG(RBKT)  &kp LG(FSLH)
+                              &kp LG(BSPC)  &none          &kp LG(SPACE)                                &kp LG(ENTER)  &none      &none
             >;
         };
 
         l_ctrl {
             bindings = <
-&none  &none     &none   &none         &none      &none                          &none         &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)
-&none  &kp LGUI  &trans  &kp LALT      &kp LSHFT  &none                   &none  &none  &none  &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(APOS)
-&none  &none     &none   &none         &none      &none          &none           &none         &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(RBKT)  &kp LC(FSLH)
-                         &kp LC(BSPC)  &none      &kp LC(SPACE)                                &kp LC(ENTER)  &none      &none
+&none  &none         &none   &none         &none          &none                          &none         &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)     &kp LC(LBKT)
+&none  &kp LC(LGUI)  &trans  &kp LC(LALT)  &kp LC(LSHFT)  &none                   &none  &none  &none  &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)  &kp LC(APOS)
+&none  &none         &none   &none         &none          &none          &none           &none         &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(RBKT)  &kp LC(FSLH)
+                             &kp LC(BSPC)  &none          &kp LC(SPACE)                                &kp LC(ENTER)  &none      &none
             >;
         };
 
         l_alt {
             bindings = <
-&none  &none     &none      &none         &none      &none                          &none         &kp LA(Y)      &kp LA(U)  &kp LA(I)      &kp LA(O)    &kp LA(P)     &kp LA(LBKT)
-&none  &kp LGUI  &kp LCTRL  &trans        &kp LSHFT  &none                   &none  &none  &none  &kp LA(H)      &kp LA(J)  &kp LA(K)      &kp LA(L)    &kp LA(SEMI)  &kp LA(APOS)
-&none  &none     &none      &none         &none      &none          &none           &none         &kp LA(N)      &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp LA(RBKT)  &kp LA(FSLH)
-                            &kp LA(BSPC)  &none      &kp LA(SPACE)                                &kp LA(ENTER)  &none      &none
+&none  &none         &none          &none         &none          &none                          &none         &kp LA(Y)      &kp LA(U)  &kp LA(I)      &kp LA(O)    &kp LA(P)     &kp LA(LBKT)
+&none  &kp LA(LGUI)  &kp LA(LCTRL)  &trans        &kp LA(LSHFT)  &none                   &none  &none  &none  &kp LA(H)      &kp LA(J)  &kp LA(K)      &kp LA(L)    &kp LA(SEMI)  &kp LA(APOS)
+&none  &none         &none          &none         &none          &none          &none           &none         &kp LA(N)      &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp LA(RBKT)  &kp LA(FSLH)
+                                    &kp LA(BSPC)  &none          &kp LA(SPACE)                                &kp LA(ENTER)  &none      &none
             >;
         };
 
         l_shift {
             bindings = <
-&none  &none     &none      &none         &none   &none                          &none         &kp LS(Y)      &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)     &kp LS(LBKT)
-&none  &kp LGUI  &kp LCTRL  &kp LALT      &trans  &none                   &none  &none  &none  &kp LS(H)      &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMI)  &kp LS(APOS)
-&none  &none     &none      &none         &none   &none          &none           &none         &kp LS(N)      &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(RBKT)  &kp LS(FSLH)
-                            &kp LS(BSPC)  &none   &kp LS(SPACE)                                &kp LS(ENTER)  &none      &none
+&none  &none         &none          &none         &none   &none                          &none         &kp LS(Y)      &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)     &kp LS(LBKT)
+&none  &kp LS(LGUI)  &kp LS(LCTRL)  &kp LS(LALT)  &trans  &none                   &none  &none  &none  &kp LS(H)      &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMI)  &kp LS(APOS)
+&none  &none         &none          &none         &none   &none          &none           &none         &kp LS(N)      &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(RBKT)  &kp LS(FSLH)
+                                    &kp LS(BSPC)  &none   &kp LS(SPACE)                                &kp LS(ENTER)  &none      &none
+            >;
+        };
+
+        r_gui {
+            bindings = <
+&kp RG(TAB)             &kp RG(Q)  &kp RG(W)  &kp RG(E)     &kp RG(R)  &kp RG(T)                      &none         &none          &none          &none         &none          &none   &none
+&hyper_beh 1 RG(GRAVE)  &kp RG(A)  &kp RG(S)  &kp RG(D)     &kp RG(F)  &kp RG(G)               &none  &none  &none  &none          &kp RG(LSHFT)  &kp RG(LALT)  &kp RG(LCTRL)  &trans  &none
+&kp RG(ESC)             &kp RG(Z)  &kp RG(X)  &kp RG(C)     &kp RG(V)  &kp RG(B)      &none           &none         &none          &none          &none         &none          &none   &none
+                                              &kp RG(BSPC)  &none      &kp RG(SPACE)                                &kp RG(ENTER)  &none          &none
+            >;
+        };
+
+        r_ctrl {
+            bindings = <
+&kp RC(TAB)             &kp RC(Q)  &kp RC(W)  &kp RC(E)     &kp RC(R)  &kp RC(T)                      &none         &none          &none          &none         &none   &none         &none
+&hyper_beh 1 RC(GRAVE)  &kp RC(A)  &kp RC(S)  &kp RC(D)     &kp RC(F)  &kp RC(G)               &none  &none  &none  &none          &kp RC(LSHFT)  &kp RC(LALT)  &trans  &kp RC(LGUI)  &none
+&kp RC(ESC)             &kp RC(Z)  &kp RC(X)  &kp RC(C)     &kp RC(V)  &kp RC(B)      &none           &none         &none          &none          &none         &none   &none         &none
+                                              &kp RC(BSPC)  &none      &kp RC(SPACE)                                &kp RC(ENTER)  &none          &none
+            >;
+        };
+
+        r_alt {
+            bindings = <
+&kp RA(TAB)             &kp RA(Q)  &kp RA(W)  &kp RA(E)     &kp RA(R)  &kp RA(T)                      &none         &none          &none          &none   &none          &none         &none
+&hyper_beh 1 RA(GRAVE)  &kp RA(A)  &kp RA(S)  &kp RA(D)     &kp RA(F)  &kp RA(G)               &none  &none  &none  &none          &kp RA(LSHFT)  &trans  &kp RA(LCTRL)  &kp RA(LGUI)  &none
+&kp RA(ESC)             &kp RA(Z)  &kp RA(X)  &kp RA(C)     &kp RA(V)  &kp RA(B)      &none           &none         &none          &none          &none   &none          &none         &none
+                                              &kp RA(BSPC)  &none      &kp RA(SPACE)                                &kp RA(ENTER)  &none          &none
+            >;
+        };
+
+        r_shift {
+            bindings = <
+&kp RS(TAB)             &kp RS(Q)  &kp RS(W)  &kp RS(E)     &kp RS(R)  &kp RS(T)                      &none         &none          &none   &none         &none          &none         &none
+&hyper_beh 1 RS(GRAVE)  &kp RS(A)  &kp RS(S)  &kp RS(D)     &kp RS(F)  &kp RS(G)               &none  &none  &none  &none          &trans  &kp RS(LALT)  &kp RS(LCTRL)  &kp RS(LGUI)  &none
+&kp RS(ESC)             &kp RS(Z)  &kp RS(X)  &kp RS(C)     &kp RS(V)  &kp RS(B)      &none           &none         &none          &none   &none         &none          &none         &none
+                                              &kp RS(BSPC)  &none      &kp RS(SPACE)                                &kp RS(ENTER)  &none   &none
             >;
         };
     };
