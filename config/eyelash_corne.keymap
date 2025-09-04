@@ -21,7 +21,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 27 26 36 37 38 39 40 22 23 24 25 41>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 27 26 36 37 38 39 40 22 23 24 25 41 47>;
             flavor = "balanced";
         };
 
@@ -44,7 +44,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 4 5 7 8 9 10 11 12 14 15 16 17 18 22 23 24 25 26 27 29 30 31 32 33 36 37 38 39 40 41>;
+            hold-trigger-key-positions = <1 2 3 4 5 7 8 9 10 11 12 14 15 16 17 18 22 23 24 25 26 27 29 30 31 32 33 36 37 38 39 40 41 47>;
         };
 
         caps_beh: caps_beh {
@@ -108,20 +108,20 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q        &kp W         &kp E        &kp R         &kp T                      &none         &kp Y         &kp U          &kp I        &kp O         &kp P              &kp LEFT_BRACKET
-&caps_beh   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RSHIFT J  &hmr RALT K  &hmr RCTRL L  &hmr RGUI SEMI     &kp SQT
-&kp ESCAPE  &kp Z        &kp X         &kp C        &kp V         &kp B      &none           &none         &kp N         &kp M          &kp COMMA    &kp DOT       &kp RIGHT_BRACKET  &kp SLASH
-                                       &kp BSPC     &mo 4         &kp SPACE                                &kp ENTER     &mo 2          &none
+&kp TAB     &kp Q        &kp W         &kp E        &kp R         &kp T                      &none         &kp Y         &kp U          &kp I          &kp O         &kp P              &kp LEFT_BRACKET
+&caps_beh   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RSHIFT J  &hmr RALT K    &hmr RCTRL L  &hmr RGUI SEMI     &kp SQT
+&kp ESCAPE  &kp Z        &kp X         &kp C        &kp V         &kp B      &none           &none         &kp N         &kp M          &kp COMMA      &kp DOT       &kp RIGHT_BRACKET  &kp SLASH
+                                       &kp BSPC     &mo 4         &kp SPACE                                &kp ENTER     &mo 2          &kp BACKSLASH
             >;
         };
 
         hyper_layer {
             display-name = "QWERTY HYPER";
             bindings = <
-&kp TAB     &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                  &none         &kp LS(LA(LC(LG(Y))))  &kp LS(LA(LC(LG(U))))  &kp LS(LA(LC(LG(I))))      &kp LS(LA(LC(LG(O))))    &kp LS(LA(LC(LG(P))))              &kp LS(LA(LC(LG(LEFT_BRACKET))))
-&trans      &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))           &none  &none  &none  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LA(LC(LG(K))))      &kp LS(LA(LC(LG(L))))    &kp LS(LA(LC(LG(SEMI))))           &kp LS(LA(LC(LG(SQT))))
-&kp ESCAPE  &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(X))))  &kp LS(LC(LA(LG(C))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(B))))  &none           &none         &kp LS(LA(LC(LG(N))))  &kp LG(LC(LA(LS(M))))  &kp LS(LA(LC(LG(COMMA))))  &kp LG(LC(LA(LS(DOT))))  &kp LA(LS(LC(LG(RIGHT_BRACKET))))  &kp LS(LA(LC(LG(SLASH))))
-                                                          &kp BSPC               &mo 4                  &kp SPACE                                            &kp ENTER              &mo 2                  &none
+&kp TAB     &kp LS(LA(LC(LG(Q))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                  &none         &kp LS(LA(LC(LG(Y))))  &kp LS(LA(LC(LG(U))))  &kp LS(LA(LC(LG(I))))          &kp LS(LA(LC(LG(O))))    &kp LS(LA(LC(LG(P))))              &kp LS(LA(LC(LG(LEFT_BRACKET))))
+&trans      &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))           &none  &none  &none  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LA(LC(LG(K))))          &kp LS(LA(LC(LG(L))))    &kp LS(LA(LC(LG(SEMI))))           &kp LS(LA(LC(LG(SQT))))
+&kp ESCAPE  &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(X))))  &kp LS(LC(LA(LG(C))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(B))))  &none           &none         &kp LS(LA(LC(LG(N))))  &kp LG(LC(LA(LS(M))))  &kp LS(LA(LC(LG(COMMA))))      &kp LG(LC(LA(LS(DOT))))  &kp LA(LS(LC(LG(RIGHT_BRACKET))))  &kp LS(LA(LC(LG(SLASH))))
+                                                          &kp BSPC               &mo 4                  &kp SPACE                                            &kp ENTER              &mo 2                  &kp LS(LA(LC(LG(BACKSLASH))))
             >;
         };
 
@@ -131,7 +131,7 @@
 &none  &kp F1                &kp F2                &kp F3            &kp F4              &kp F5                     &none         &kp F6     &kp F7               &kp F8             &kp F9                 &kp F11                &kp F12
 &mo 3  &hml LEFT_COMMAND N1  &hml LEFT_CONTROL N2  &hml LEFT_ALT N3  &hml LEFT_SHIFT N4  &kp N5              &none  &none  &none  &kp N6     &hmr RIGHT_SHIFT N7  &hmr RIGHT_ALT N8  &hmr RIGHT_CONTROL N9  &hmr RIGHT_COMMAND N0  &none
 &none  &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none      &kp EQUAL            &none              &kp DOT                &none                  &kp SLASH
-                                                   &kp BSPC          &trans              &kp SPACE                                &kp ENTER  &trans               &none
+                                                   &kp BSPC          &trans              &kp SPACE                                &kp ENTER  &trans               &kp BACKSLASH
             >;
         };
 
@@ -141,7 +141,7 @@
 &none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp F3            &prtscr_fast        &prtscr                    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE     &kp C_NEXT         &kp C_MUTE             &kp C_VOLUME_DOWN      &kp C_VOLUME_UP
 &trans  &hml LEFT_COMMAND N1  &hml LEFT_CONTROL N2  &hml LEFT_ALT N3  &hml LEFT_SHIFT N4  &kp N5              &none  &none  &none  &kp N6          &hmr RIGHT_SHIFT N7  &hmr RIGHT_ALT N8  &hmr RIGHT_CONTROL N9  &hmr RIGHT_COMMAND N0  &none
 &none   &none                 &none                 &none             &kp MINUS           &none      &none           &none         &none           &kp EQUAL            &none              &kp DOT                &none                  &kp SLASH
-                                                    &kp BSPC          &trans              &kp SPACE                                &kp ENTER       &trans               &none
+                                                    &kp BSPC          &trans              &kp SPACE                                &kp ENTER       &trans               &kp BACKSLASH
             >;
         };
 
