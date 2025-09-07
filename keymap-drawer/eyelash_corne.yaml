@@ -151,7 +151,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
-  - F3
+  - F11
   - '&prtscr_fast'
   - '&prtscr'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
