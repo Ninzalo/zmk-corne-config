@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '[', s: '{'}
-  - '&caps_beh'
+  - {t: '`', h: QWERTY HYPER, s: '~'}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
@@ -63,7 +63,7 @@ layers:
   - Hyper+O
   - Hyper+P
   - {t: 'Hyper+[', s: 'Hyper+{'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - Hyper+A
   - Hyper+S
   - Hyper+D
@@ -112,7 +112,7 @@ layers:
   - F9
   - F11
   - F12
-  - NUMBER (FN)
+  - {t: NUMBER (FN), type: held alternate}
   - {t: '1', h: '$$mdi:apple-keyboard-command$$', s: '!'}
   - {t: '2', h: '$$mdi:apple-keyboard-control$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
@@ -210,7 +210,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
