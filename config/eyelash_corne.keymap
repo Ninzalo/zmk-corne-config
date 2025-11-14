@@ -44,16 +44,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 4 5 7 8 9 10 11 12 14 15 16 17 18 22 23 24 25 26 27 29 30 31 32 33 36 37 38 39 40 41 47>;
-        };
-
-        caps_beh: caps_beh {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_BEH";
-            #binding-cells = <0>;
-            bindings = <&hyper_beh 1 GRAVE>, <&kp CAPS>;
-
-            tapping-term-ms = <175>;
+            hold-trigger-key-positions = <1 2 3 4 5 7 8 9 10 11 12 14 15 16 17 18 22 23 24 25 26 27 29 30 31 32 33 36 37 38 39 40 41 47 45 44 42 0 28>;
         };
     };
 
@@ -108,10 +99,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q        &kp W         &kp E        &kp R         &kp T                      &none         &kp Y         &kp U          &kp I          &kp O         &kp P              &kp LEFT_BRACKET
-&caps_beh   &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RSHIFT J  &hmr RALT K    &hmr RCTRL L  &hmr RGUI SEMI     &kp SQT
-&kp ESCAPE  &kp Z        &kp X         &kp C        &kp V         &kp B      &none           &none         &kp N         &kp M          &kp COMMA      &kp DOT       &kp RIGHT_BRACKET  &kp SLASH
-                                       &kp BSPC     &mo 4         &kp SPACE                                &kp ENTER     &mo 2          &kp BACKSLASH
+&kp TAB             &kp Q        &kp W         &kp E        &kp R         &kp T                      &none         &kp Y         &kp U          &kp I          &kp O         &kp P              &kp LEFT_BRACKET
+&hyper_beh 1 GRAVE  &hml LGUI A  &hml LCTRL S  &hml LALT D  &hml LSHFT F  &kp G               &none  &none  &none  &hmr GLOBE H  &hmr RSHIFT J  &hmr RALT K    &hmr RCTRL L  &hmr RGUI SEMI     &kp SQT
+&kp ESCAPE          &kp Z        &kp X         &kp C        &kp V         &kp B      &none           &none         &kp N         &kp M          &kp COMMA      &kp DOT       &kp RIGHT_BRACKET  &kp SLASH
+                                               &kp BSPC     &mo 4         &kp SPACE                                &kp ENTER     &mo 2          &kp BACKSLASH
             >;
         };
 
